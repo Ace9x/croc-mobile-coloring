@@ -182,3 +182,4 @@ footer{border-top:1px solid var(--line);background:var(--ink-2);padding:4rem 0 c
 @media(max-width:899px){.mascot{width:58vw;opacity:.9;bottom:auto;top:90px}}
 .why-media{margin:0}
 .h-meta.clean{margin-top:1.6rem}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
