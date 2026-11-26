@@ -53,3 +53,5 @@
     try { await navigator.clipboard.writeText(document.getElementById('fb-msg').textContent); cp.textContent = 'Copied ✓'; } catch { cp.textContent = 'Select the text above to copy'; }
   });
 })();
+
+document.querySelectorAll('.zcopy').forEach(b=>b.addEventListener('click',()=>{const v=b.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)}).catch(()=>{b.textContent=v})}));

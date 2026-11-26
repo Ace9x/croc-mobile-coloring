@@ -186,3 +186,5 @@ footer{border-top:1px solid var(--line);background:var(--ink-2);padding:4rem 0 c
 .why-media{margin:0}
 .h-meta.clean{margin-top:1.6rem}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.zcopy{margin-left:.5rem;font:700 .8rem/1 inherit;padding:.4rem .7rem;border-radius:999px;border:1px solid rgba(214,175,72,.6);background:transparent;color:#D6AF48;cursor:pointer;min-height:32px}.zcopy:focus-visible{outline:2px solid #D6AF48;outline-offset:2px}
