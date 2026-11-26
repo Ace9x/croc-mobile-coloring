@@ -6,7 +6,7 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   $$('[data-cfg-hide]').forEach(el => { if (has(el.dataset.cfgHide)) { el.removeAttribute('data-cfg-hide'); el.hidden = false; } });
   $$('[data-cfg-text]').forEach(el => { if (has(el.dataset.cfgText)) el.textContent = C[el.dataset.cfgText]; });
-  $$('[data-cfg-mail]').forEach(a => { if (has('email')) { a.href = 'mailto:' + C.email; a.textContent = C.email; } });
+  $$('[data-cfg-mail]').forEach(w => { if (has('email')) { const a = document.createElement('a'); a.href = 'mailto:' + C.email; a.textContent = C.email; w.replaceWith(a); } });
   if (has('photos')) { const g = $('#gal'); g && C.photos.forEach(p => { const f = document.createElement('figure'), i = new Image(); i.src = (p.src.startsWith('img/') ? '../' : '') + p.src; i.alt = p.alt || 'CROC Mobile Coloring project'; i.loading = 'lazy'; i.width = 800; i.height = 600; f.appendChild(i); g.appendChild(f); }); }
   $$('.yr').forEach(y => y.textContent = new Date().getFullYear());
 
@@ -17,7 +17,7 @@
   // header + mobile bar
   const hdr = $('.hdr'), bar = $('#mbar');
   const onScroll = () => { const y = scrollY; hdr && hdr.classList.toggle('scrolled', y > 24); bar && bar.classList.toggle('on', y > innerHeight * .5); };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  addEventListener('scroll', onScroll, { passive: true }); requestAnimationFrame(onScroll);
 
   // reveals
   const rv = $$('.rv');
