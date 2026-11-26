@@ -7,7 +7,7 @@
   });
   document.querySelectorAll('[data-cfg-text]').forEach(el => { if (has(el.dataset.cfgText)) el.textContent = C[el.dataset.cfgText]; });
   document.querySelectorAll('[data-cfg-mail]').forEach(a => { if (has('email')) { a.href = 'mailto:' + C.email; a.textContent = C.email; } });
-  if (has('mascot')) { const m = document.getElementById('mascot'); m.src = C.mascot; m.hidden = false; }
+  { const m = document.getElementById('mascot'); if (m) { if (!has('mascot')) m.hidden = true; else if (!(m.getAttribute('srcset') || '').includes(C.mascot)) { m.removeAttribute('srcset'); m.src = C.mascot; } } }
   if (has('photos')) {
     const g = document.getElementById('gal');
     C.photos.forEach(p => { const f = document.createElement('figure'); const i = new Image(); i.src = p.src; i.alt = p.alt || 'CROC Mobile Coloring project'; i.loading = 'lazy'; i.width = 800; i.height = 600; f.appendChild(i); g.appendChild(f); });

@@ -16,8 +16,7 @@
      - photos      : real before/after photos of past jobs (turns on the
                      "Recent work" gallery). Put files in img/work/ and list
                      them as {src:"img/work/kitchen.webp", alt:"Kitchen repaint, cream walls"}
-     - mascot      : transparent PNG/WebP of the crocodile mascot cut from the
-                     client banner, e.g. "img/mascot.webp" (shows in the hero)
+     (mascot + logo are cut from the client's banner: img/mascot-*.webp, img/logo-*.webp)
    ===================================================================== */
 window.CROC_CONFIG = {
   phoneDisplay: "917-450-0270",
@@ -26,7 +25,7 @@ window.CROC_CONFIG = {
   email:        "",   // TODO(client)
   hours:        "",   // TODO(client)
   photos:       [],   // TODO(client): real job photos
-  mascot:       ""    // TODO: crocodile mascot cut-out from the banner
+  mascot:       "img/mascot-1040.webp"  // crocodile emblem cut from the client banner ("" hides it)
 };
 </script>
 <title>CROC Mobile Coloring | Interior &amp; Exterior Painting, New York Area</title>
@@ -34,7 +33,7 @@ window.CROC_CONFIG = {
 <link rel="canonical" href="https://ace9x.github.io/croc-mobile-coloring/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0A0907">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/mark-64.png" type="image/png" sizes="64x64">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
@@ -64,7 +63,7 @@ window.CROC_CONFIG = {
   "url":"https://ace9x.github.io/croc-mobile-coloring/",
   "telephone":"+1-917-450-0270",
   "image":"https://ace9x.github.io/croc-mobile-coloring/img/og.jpg",
-  "logo":"https://ace9x.github.io/croc-mobile-coloring/img/icon-512.png",
+  "logo":"https://ace9x.github.io/croc-mobile-coloring/img/logo.png",
   "areaServed":{"@type":"State","name":"New York"},
   "knowsAbout":["Interior painting","Exterior painting","Home improvements","Residential painting","Commercial painting"],
   "hasOfferCatalog":{"@type":"OfferCatalog","name":"Painting & house services","itemListElement":[
@@ -82,9 +81,8 @@ window.CROC_CONFIG = {
 
 <header class="hdr" id="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="CROC Mobile Coloring, back to top">
-      <img src="img/mark.svg" width="40" height="40" alt="">
-      <div><b class="gold">CROC</b><span>Mobile Coloring</span></div>
+    <a class="brand" href="#top" aria-label="Back to top">
+      <img class="logo" src="img/logo-240.webp" srcset="img/logo-240.webp 240w, img/logo-480.webp 480w" sizes="112px" width="240" height="109" alt="CROC Mobile Coloring">
     </a>
     <nav class="nav" aria-label="Main">
       <a href="#services">Services</a>
@@ -108,8 +106,8 @@ window.CROC_CONFIG = {
       <img src="img/hero-1280.webp" srcset="img/hero-800.webp 800w, img/hero-1280.webp 1280w" sizes="100vw" width="1280" height="720" alt="" fetchpriority="high" decoding="async">
     </picture>
   </div>
-  <img class="mascot" id="mascot" alt="CROC mascot: a green crocodile in a black polo holding a gold paint roller" width="520" height="620" hidden>
   <div class="wrap hero-in">
+    <img class="mascot rise d1" id="mascot" src="img/mascot-640.webp" srcset="img/mascot-400.webp 400w, img/mascot-640.webp 640w, img/mascot-1040.webp 1040w" sizes="(min-width:1100px) 480px, 250px" width="1040" height="912" alt="CROC mascot: a muscular green crocodile in a black CROC polo holding a gold paint roller in front of a gold house">
     <p class="eyebrow rise d1">Painting &amp; House Services · <span data-cfg-text="serviceArea">New York area</span></p>
     <h1 id="hero-title">
       <span class="h-title rise d2"><span class="gold shine">CROC</span></span>
@@ -278,7 +276,7 @@ window.CROC_CONFIG = {
   <div class="wrap">
     <div class="ft">
       <div>
-        <a class="brand" href="#top"><img src="img/mark.svg" width="40" height="40" alt=""><div><b class="gold">CROC</b><span>Mobile Coloring</span></div></a>
+        <a class="brand" href="#top" aria-label="Back to top"><img class="logo logo-lg" src="img/logo-480.webp" width="480" height="218" alt="CROC Mobile Coloring" loading="lazy" decoding="async"></a>
         <span class="script">Bringing Color &amp; Quality to Every Home</span>
       </div>
       <div>

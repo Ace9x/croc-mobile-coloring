@@ -1,11 +1,16 @@
 <!doctype html><html><head><link rel="stylesheet" href="../style.css"><style>
-body{margin:0;width:1200px;height:630px;overflow:hidden;position:relative;background:#0A0907}
-.bg{position:absolute;inset:0;background:url(../img/hero-1280.webp) 70% 50%/cover}
-.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,7,.95) 0%,rgba(10,9,7,.6) 50%,rgba(10,9,7,.1) 100%)}
-.t{position:absolute;left:80px;top:110px}
-.t b{font:400 190px/.85 var(--slab);display:block}
-.t i{font:800 34px/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;display:block;margin-top:18px;font-style:normal;color:#F3E9D2}
-.t em{font:400 54px/1.2 var(--script);color:#F6DC8A;display:block;margin-top:26px;font-style:normal}
-.t span{display:block;margin-top:26px;font:800 30px/1 var(--sans);color:#F3E9D2;letter-spacing:.06em}
-.t span u{text-decoration:none;color:#D6AF48}
-</style></head><body><div class="bg"></div><div class="t"><b class="gold">CROC</b><i>Mobile Coloring</i><em>Bringing Color &amp; Quality to Every Home</em><span>Free estimates · Call or text <u>917-450-0270</u></span></div></body></html>
+body{margin:0;width:1200px;height:630px;overflow:hidden;position:relative;background:radial-gradient(70% 90% at 30% 50%,#1d1a14 0%,#0A0907 70%)}
+.frame{position:absolute;inset:18px;border:2px solid rgba(214,175,72,.55);border-radius:6px}
+.brush{position:absolute;right:0;top:0;height:630px;width:260px;background:url(../../croc-mobile-coloring-assets/brush.png) center/cover;opacity:.85;mix-blend-mode:screen;-webkit-mask:linear-gradient(90deg,transparent,#000 45%)}
+.m{position:absolute;left:40px;top:50%;transform:translateY(-50%);width:520px;filter:drop-shadow(0 20px 30px rgba(0,0,0,.7))}
+.r{position:absolute;left:575px;right:95px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.r img{width:440px}
+.r em{white-space:nowrap;font:400 40px/1.15 var(--script);color:#F6DC8A;font-style:normal;margin-top:16px}
+.r .ph{white-space:nowrap;margin-top:30px;display:flex;align-items:center;gap:16px;font:800 22px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#D6AF48}
+.r .ph b{font:800 44px/1 var(--sans);letter-spacing:.02em;color:#F3E9D2}
+.r .sm{white-space:nowrap;margin-top:20px;font:700 15px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#BDB39C}
+</style></head><body><div class="brush"></div><div class="frame"></div>
+<img class="m" src="../img/mascot-1040.webp">
+<div class="r"><img src="../img/logo-480.webp"><em>Bringing Color &amp; Quality to Every Home</em>
+<div class="ph">Call or text <b>917-450-0270</b></div><div class="sm">Free estimates · Satisfaction guaranteed</div></div>
+</body></html>
